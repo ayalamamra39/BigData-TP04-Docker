@@ -1,0 +1,571 @@
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Abdarrahman\Desktop\BIGDATA\tp3>
+
+
+
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Abdarrahman\Desktop\BIGDATA\tp3>
+
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Abdarrahman\Desktop\BIGDATA\tp3>
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+Microsoft Windows [Version 10.0.19045.6466]
+Microsoft Windows [Version 10.0.19045.6466]
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+Microsoft Windows [Version 10.0.19045.6466]
+Microsoft Windows [Version 10.0.19045.6466]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Abdarrahman\Desktop\BIGDATA\tp3>docker ps
+CONTAINER ID   IMAGE                   COMMAND                  CREATED      STATUS          PORTS
+                 NAMES
+cbc39244a5b9   ayla2526/tp3-image:v1   "python3 -m http.ser…"   5 days ago   Up 45 seconds   0.0.0.0:8083->8000/tcp, [::]:8083->8000/tcp   cont3
+f833bd2f6c98   ayla2526/tp3-image:v1   "python3 -m http.ser…"   5 days ago   Up 44 seconds   0.0.0.0:8082->8000/tcp, [::]:8083->8000/tcp   cont3
+f833bd2f6c98   ayla2526/tp3-image:v1   "python3 -m http.ser…"   5 days ago   Up 44 seconds   0.0.0.0:8082->8000/tcp, [::]:f833bd2f6c98   ayla2526/tp3-image:v1   "python3 -m http.ser…"   5 days ago   Up 44 seconds   0.0.0.0:8082->8000/tcp, [::]:8082->8000/tcp   cont2
+2b4f27032562   ayla2526/tp3-image:v1   "python3 -m http.ser…"   5 days ago   Up 43 seconds   0.0.0.0:8081->8000/tcp, [::]:8081->8000/tcp   cont1
+34d54316a2ee   ayla2526/tp3-image:v1   "python3 -m http.ser…"   5 days ago   Up 42 seconds   8000/tcp
+                 hardcore_shirley
+
+C:\Users\Abdarrahman\Desktop\BIGDATA\tp3>docker network ls
+NETWORK ID     NAME      DRIVER    SCOPE
+0bfaad4aef03   bridge    bridge    local
+9122a8d03ede   host      host      local
+b20cdb7a55e6   none      null      local
+bc356a58a1ca   tp3-net   bridge    local
+
+
+C:\Users\Abdarrahman\Desktop\BIGDATA\tp3>docker inspect cont1
+[
+    {
+        "Id": "2b4f27032562affb341c6181fdc082034b3126df8acd746df15d9b0d44598f01",
+        "Created": "2025-11-17T09:05:38.655444805Z",
+        "Path": "python3",
+        "Args": [
+            "-m",
+            "http.server",
+            "8000"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 622,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2025-11-22T16:12:12.2576666Z",
+            "FinishedAt": "2025-11-22T16:12:05.8798925Z"
+        },
+        "Image": "sha256:94687a54ec5e5fbc31f7b9449659a1c465248d94102d3bc4865f3cf113cdd846",
+        "ResolvConfPath": "/var/lib/docker/containers/2b4f27032562affb341c6181fdc082034b3126df8acd746df15d9b0d44598f01/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/2b4f27032562affb341c6181fdc082034b3126df8acd746df15d9b0d44598f01/hostname",
+        "HostsPath": "/var/lib/docker/containers/2b4f27032562affb341c6181fdc082034b3126df8acd746df15d9b0d44598f01/hosts", 
+        "LogPath": "/var/lib/docker/containers/2b4f27032562affb341c6181fdc082034b3126df8acd746df15d9b0d44598f01/2b4f27032562affb341c6181fdc082034b3126df8acd746df15d9b0d44598f01-json.log",
+        "Name": "/cont1",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8081"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                8,
+                116
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": null,
+            "Name": "overlayfs"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "2b4f27032562",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.10.19",
+                "PYTHON_SHA256=c8f4a596572201d81dd7df91f70e177e19a70f1d489968b54b5fbbf29a97c076"
+            ],
+            "Cmd": [
+                "python3",
+                "-m",
+                "http.server",
+                "8000"
+            ],
+            "Image": "ayla2526/tp3-image:v1",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {},
+            "StopTimeout": 1
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "6dd3a2d7345fda4246c701410c775849ec9d82c8e697e48e3fc99b778ae1f54c",
+            "SandboxKey": "/var/run/docker/netns/6dd3a2d7345f",
+            "Ports": {
+                "8000/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8081"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "8081"
+                    }
+                ]
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "20b4be57491a3e1cb238aa2200ee1875f3ad63f213a05b5905d9fdc0c2fe7219",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.4",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "8e:62:78:5b:99:d1",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "8e:62:78:5b:99:d1",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "0bfaad4aef0354dd1840b993baf7e860cff6dadf46315cc8f9caea29e94b6176",
+                    "EndpointID": "20b4be57491a3e1cb238aa2200ee1875f3ad63f213a05b5905d9fdc0c2fe7219",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.4",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                },
+                "tp3-net": {
+                    "IPAMConfig": {},
+                    "Links": null,
+                    "Aliases": [],
+                    "MacAddress": "02:2b:75:00:a0:03",
+                    "DriverOpts": {},
+                    "GwPriority": 0,
+                    "NetworkID": "bc356a58a1ca39b98f150aacc36391c555549b0c23dc0b9d0e49e8391878bc98",
+                    "EndpointID": "2ec0e9e6d0702cc3eeb44c8a2915ab232c35aa8fdabb3a2fee8afebb899655bc",
+                    "Gateway": "172.18.0.1",
+                    "IPAddress": "172.18.0.4",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": [
+                        "cont1",
+                        "2b4f27032562"
+                    ]
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:90a07da74ba52597d635ed32558d49a92ec6615659c64c479325d666abafbb07",
+            "size": 1434,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]
+
+C:\Users\Abdarrahman\Desktop\BIGDATA\tp3>docker network inspect bridge
+[
+    {
+        "Name": "bridge",
+        "Id": "0bfaad4aef0354dd1840b993baf7e860cff6dadf46315cc8f9caea29e94b6176",
+        "Created": "2025-11-22T16:12:07.2628439Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.17.0.0/16",
+                    "Gateway": "172.17.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "2b4f27032562affb341c6181fdc082034b3126df8acd746df15d9b0d44598f01": {
+                "Name": "cont1",
+                "EndpointID": "20b4be57491a3e1cb238aa2200ee1875f3ad63f213a05b5905d9fdc0c2fe7219",
+                "MacAddress": "8e:62:78:5b:99:d1",
+                "IPv4Address": "172.17.0.4/16",
+                "IPv6Address": ""
+            },
+            "34d54316a2ee2dea2b00dc62db57f1461d1c36db6f27dee46eb47a27e435e2eb": {
+                "Name": "hardcore_shirley",
+                "EndpointID": "31d850c8137819530a948b136181988071a75e8cb05117e25e61ee9a7fbfb42d",
+                "MacAddress": "ce:cf:00:9c:89:7c",
+                "IPv4Address": "172.17.0.5/16",
+                "IPv6Address": ""
+            },
+            "cbc39244a5b92f32c52bd9ac8a0c13448e0fc1fb87b06b3178b511e2f4946099": {
+                "Name": "cont3",
+                "EndpointID": "521984a5820fffc8fb26a619430eb5bf7b302e8d7826f635fb2f5546d5d6c627",
+                "MacAddress": "be:bf:87:0a:54:59",
+                "IPv4Address": "172.17.0.2/16",
+                "IPv6Address": ""
+            },
+            "f833bd2f6c9871e2137f9ca9283852a9f1dced56a81e86068bb03281f008f4cf": {
+                "Name": "cont2",
+                "EndpointID": "97f72cccf1eef52b993b1444db1c874e71f6543b5d82001a0856ca48414cb9f1",
+                "MacAddress": "3e:31:57:62:f3:9c",
+                "IPv4Address": "172.17.0.3/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]
+
+C:\Users\Abdarrahman\Desktop\BIGDATA\tp3>docker exec -it cont1 bash
+root@2b4f27032562:/app# ping cont2
+bash: ping: command not found
+root@2b4f27032562:/app# apt update
+Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9670 kB]
+Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [71.8 kB]
+Fetched 9978 kB in 8s (1311 kB/s)
+6 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Notice: Repository 'http://deb.debian.org/debian trixie InRelease' changed its 'Version' value from '13.1' to '13.2'
+root@2b4f27032562:/app# apt install iputils-ping -y
+Installing:
+  iputils-ping
+
+Installing dependencies:
+  libidn2-0  libunistring5  linux-sysctl-defaults
+
+Summary:
+  Upgrading: 0, Installing: 4, Removing: 0, Not Upgrading: 6
+  Download size: 643 kB
+  Space needed: 2810 kB / 1024 GB available
+
+Get:1 http://deb.debian.org/debian trixie/main amd64 libunistring5 amd64 1.3-2 [477 kB]
+Get:2 http://deb.debian.org/debian trixie/main amd64 libidn2-0 amd64 2.3.8-2 [109 kB]
+Get:3 http://deb.debian.org/debian trixie/main amd64 iputils-ping amd64 3:20240905-3 [51.2 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 linux-sysctl-defaults all 4.12 [5624 B]
+Fetched 643 kB in 1s (826 kB/s)
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/DebPreparing to unpack .../linux-sysctl-defaults_4.12_all.deb ...
+Unpacking linux-sysctl-defaults (4.12) ...
+Setting up linux-sysctl-defaults (4.12) ...
+Setting up libunistring5:amd64 (1.3-2) ...
+Setting up libidn2-0:amd64 (2.3.8-2) ...
+Setting up iputils-ping (3:20240905-3) ...
+Processing triggers for libc-bin (2.41-12) ...
+root@2b4f27032562:/app# ping cont2
+PING cont2 (172.18.0.3) 56(84) bytes of data.
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=1 ttl=64 time=0.134 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=2 ttl=64 time=0.059 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=3 ttl=64 time=0.076 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=4 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=5 ttl=64 time=0.108 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=6 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=7 ttl=64 time=0.053 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=8 ttl=64 time=0.053 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=9 ttl=64 time=0.070 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=10 ttl=64 time=0.147 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=11 ttl=64 time=0.055 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=12 ttl=64 time=0.055 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=13 ttl=64 time=0.053 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=14 ttl=64 time=0.062 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=15 ttl=64 time=0.055 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=16 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=17 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=18 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=19 ttl=64 time=0.099 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=20 ttl=64 time=0.056 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=21 ttl=64 time=0.103 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=22 ttl=64 time=0.227 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=23 ttl=64 time=0.459 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=24 ttl=64 time=0.093 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=25 ttl=64 time=0.098 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=26 ttl=64 time=0.059 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=27 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=28 ttl=64 time=0.056 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=29 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=30 ttl=64 time=0.074 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=31 ttl=64 time=0.055 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=32 ttl=64 time=0.056 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=33 ttl=64 time=0.055 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=34 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=35 ttl=64 time=0.096 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=36 ttl=64 time=0.079 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=37 ttl=64 time=0.056 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=38 ttl=64 time=0.086 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=39 ttl=64 time=0.055 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=40 ttl=64 time=0.055 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=41 ttl=64 time=0.063 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=42 ttl=64 time=0.053 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=43 ttl=64 time=0.053 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=44 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=45 ttl=64 time=0.064 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=46 ttl=64 time=0.060 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=47 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=48 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=49 ttl=64 time=0.053 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=50 ttl=64 time=0.118 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=51 ttl=64 time=0.362 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=52 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=53 ttl=64 time=0.106 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=54 ttl=64 time=0.051 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=55 ttl=64 time=0.087 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=56 ttl=64 time=0.082 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=57 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=58 ttl=64 time=0.064 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=59 ttl=64 time=0.153 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=60 ttl=64 time=0.067 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=61 ttl=64 time=0.057 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=62 ttl=64 time=0.092 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=63 ttl=64 time=0.073 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=64 ttl=64 time=0.068 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=65 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=66 ttl=64 time=0.091 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=67 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=68 ttl=64 time=0.055 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=69 ttl=64 time=0.053 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=70 ttl=64 time=0.054 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=71 ttl=64 time=0.055 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=72 ttl=64 time=0.062 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=73 ttl=64 time=0.053 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=74 ttl=64 time=0.063 ms
+64 bytes from cont2.tp3-net (172.18.0.3): icmp_seq=75 ttl=64 time=0.054 ms
+
+
+PS C:\Users\Abdarrahman\Desktop\BIGDATA\tp3> docker exec -it cont1 bash
+root@2b4f27032562:/app# apt update
+Hit:1 http://deb.debian.org/debian trixie InRelease
+Hit:2 http://deb.debian.org/debian trixie-updates InRelease
+Hit:3 http://deb.debian.org/debian-security trixie-security InRelease
+6 packages can be upgraded. Run 'apt list --upgradable' to see them.
+root@2b4f27032562:/app# apt install curl -y
+Installing:
+  curl     
+
+Installing dependencies:
+  bash-completion  libcurl4t64       libkeyutils1     libldap2       libpsl5t64        libsasl2-modules-db
+  krb5-locales     libgnutls30t64    libkrb5-3        libnghttp2-14  librtmp1          libssh2-1t64
+  libbrotli1       libgssapi-krb5-2  libkrb5support0  libnghttp3-9   libsasl2-2        libtasn1-6
+  libcom-err2      libk5crypto3      libldap-common   libp11-kit0    libsasl2-modules  publicsuffix
+
+Suggested packages:
+  gnutls-bin  krb5-user                    | libsasl2-modules-gssapi-heimdal  libsasl2-modules-otp
+  krb5-doc    libsasl2-modules-gssapi-mit  libsasl2-modules-ldap              libsasl2-modules-sql
+
+Summary:
+  Upgrading: 0, Installing: 25, Removing: 0, Not Upgrading: 6
+  Download size: 5114 kB
+  Space needed: 15.7 MB / 1024 GB available
+
+Get:1 http://deb.debian.org/debian trixie/main amd64 bash-completion all 1:2.16.0-7 [319 kB]
+Get:2 http://deb.debian.org/debian trixie/main amd64 krb5-locales all 1.21.3-5 [101 kB]
+Get:3 http://deb.debian.org/debian trixie/main amd64 libbrotli1 amd64 1.1.0-2+b7 [307 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 libkrb5support0 amd64 1.21.3-5 [33.0 kB]
+Get:5 http://deb.debian.org/debian trixie/main amd64 libcom-err2 amd64 1.47.2-3+b3 [25.0 kB]
+Get:6 http://deb.debian.org/debian trixie/main amd64 libk5crypto3 amd64 1.21.3-5 [81.5 kB]
+Get:7 http://deb.debian.org/debian trixie/main amd64 libkeyutils1 amd64 1.6.3-6 [9456 B]
+Get:8 http://deb.debian.org/debian trixie/main amd64 libkrb5-3 amd64 1.21.3-5 [326 kB]
+Get:9 http://deb.debian.org/debian trixie/main amd64 libgssapi-krb5-2 amd64 1.21.3-5 [138 kB]
+Get:10 http://deb.debian.org/debian trixie/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-9 [19.8 kB]
+Get:11 http://deb.debian.org/debian trixie/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-9 [57.5 kB]
+Get:12 http://deb.debian.org/debian trixie/main amd64 libldap2 amd64 2.6.10+dfsg-1 [194 kB]
+Get:13 http://deb.debian.org/debian trixie/main amd64 libnghttp2-14 amd64 1.64.0-1.1 [76.0 kB]
+Get:14 http://deb.debian.org/debian trixie/main amd64 libnghttp3-9 amd64 1.8.0-1 [67.7 kB]
+Get:15 http://deb.debian.org/debian trixie/main amd64 libpsl5t64 amd64 0.21.2-1.1+b1 [57.2 kB]
+Get:16 http://deb.debian.org/debian trixie/main amd64 libp11-kit0 amd64 0.25.5-3 [425 kB]
+Get:17 http://deb.debian.org/debian trixie/main amd64 libtasn1-6 amd64 4.20.0-2 [49.9 kB]
+Get:18 http://deb.debian.org/debian trixie/main amd64 libgnutls30t64 amd64 3.8.9-3 [1465 kB]
+Get:19 http://deb.debian.org/debian trixie/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b5 [58.8 kB]
+Get:20 http://deb.debian.org/debian trixie/main amd64 libssh2-1t64 amd64 1.11.1-1 [245 kB]
+Get:21 http://deb.debian.org/debian trixie/main amd64 libcurl4t64 amd64 8.14.1-2+deb13u2 [391 kB]
+Get:22 http://deb.debian.org/debian trixie/main amd64 curl amd64 8.14.1-2+deb13u2 [270 kB]
+Get:23 http://deb.debian.org/debian trixie/main amd64 libldap-common all 2.6.10+dfsg-1 [35.1 kB]
+Get:24 http://deb.debian.org/debian trixie/main amd64 libsasl2-modules amd64 2.1.28+dfsg1-9 [66.7 kB]
+Get:25 http://deb.debian.org/debian trixie/main amd64 publicsuffix all 20250328.1952-0.1 [296 kB]
+Fetched 5114 kB in 5s (1124 kB/s)     
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/DebSetting up libldap2:amd64 (2.6.10+dfsg-1) ...
+Setting up libgnutls30t64:amd64 (3.8.9-3) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b5) ...
+Setting up libgssapi-krb5-2:amd64 (1.21.3-5) ...
+Setting up libcurl4t64:amd64 (8.14.1-2+deb13u2) ...
+Setting up curl (8.14.1-2+deb13u2) ...
+Processing triggers for libc-bin (2.41-12) ...
+root@2b4f27032562:/app# curl http://cont2:8000
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Directory listing for /</title>
+</head>
+<body>
+<h1>Directory listing for /</h1>
+<hr>
+<ul>
+<li><a href="Dockerfile">Dockerfile</a></li>
+<li><a href="INSURANCE%20RISK%20%26%20CLAIMS%20ANALYSIS.pbix">INSURANCE RISK &amp; CLAIMS ANALYSIS.pbix</a></li>
+<li><a href="requirement.txt">requirement.txt</a></li>
+<li><a href="total%20claim%20amount.png">total claim amount.png</a></li>
+<li><a href="total%20policies.png">total policies.png</a></li>
+</ul>
+<hr>
+</body>
+</html>
+root@2b4f27032562:/app# getent hosts cont2
+172.18.0.3      cont2
+root@2b4f27032562:/app#
